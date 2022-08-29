@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <div class="option">
+        <div class="country">
+            <label for="country">Country</label>
+
+            <select id="country" name="country" class="form-control" onchange="getState(this)"></select>
+        </div>
+
+        <div class="state">
+            <label for="state">State</label>
+
+            <select id="state" name="state" class="form-control" onchange="getCity(this)"></select>
+        </div>
+
+        <div class="city">
+            <label for="city">City</label>
+
+            <select id="cityName" name="cityName" class="form-control"></select>
+        </div>
+        <div class="submit">
+            <label for="submit">Submit</label>
+            <button type="submit" id="submit" onclick="getCityName()">
+                Submit
+            </button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="column">
+            <div class="current">
+                <button class="device-location" id="device-location" onclick="getDeviceLocation()">
+                    Device Location
+                </button>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="search">
+                <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." />
+            </div>
+        </div>
+        <div class="output" id="output">
+            <div class="location-details">
+                <div class="city" id="city">New Delhi,India</div>
+                <div class="date" id="date">10 July (Monday), 2022</div>
+            </div>
+            <div class="weather-status">
+                <div class="temp" id="temp">32&deg;C</div>
+                <div class="minmax" id="minmax">22&deg;C (min) 39&deg;C (max)</div>
+                <div class="weather" id="weather">Sunny</div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
